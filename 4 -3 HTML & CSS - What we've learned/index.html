@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Learning Techniques</title>
+  </head>
+  <body>
+    <header>
+      <h1>LT</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="header-image">
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1>Learning is Growing</h1>
+        <p>Are you looking to improve your skillset?</p>
+        <button
+          onclick="
+            document
+              .getElementById('contact')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Contact Us
+        </button>
+      </div>
+    </div>
+    <!-- Video Section -->
+    <section class="media-section">
+      <h2>Watch & Learn</h2>
+      <video controls>
+        <source src="sample-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Info Section with Rounded Image -->
+    <section class="info-section">
+      <img
+        src="https://images.pexels.com/photos/30299380/pexels-photo-30299380/free-photo-of-man-in-black-coat-leaning-against-tree-in-fall.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+        alt="Person learning"
+      />
+      <div class="info-text">
+        <h3>Enhance Your Learning</h3>
+        <p>
+          Discover effective techniques to improve your skills and knowledge.
+        </p>
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="audio-section">
+      <h2>Listen & Grow</h2>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+
+    <main>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <fieldset>
+            <legend>Select your area of interest:</legend>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" name="interest" value="coding" />
+                Coding</label
+              >
+              <label
+                ><input type="checkbox" name="interest" value="personality" />
+                Personality Development</label
+              >
+              <label
+                ><input type="checkbox" name="interest" value="interview" />
+                Interview Techniques</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interest"
+                  value="certifications"
+                />
+                Certifications</label
+              >
+              <label
+                ><input type="checkbox" name="interest" value="free-courses" />
+                Free Courses</label
+              >
+            </div>
+          </fieldset>
+
+          <label for="message">Feedback Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Learning Techniques. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

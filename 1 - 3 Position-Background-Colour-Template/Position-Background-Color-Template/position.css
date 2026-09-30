@@ -1,0 +1,125 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222222;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #dbeafe;
+  padding: 30px 0;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+/* SECTION */
+
+.section {
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+
+/* SHARED POSITION EXAMPLES */
+
+.position-box {
+  background-color: #eef2f7;
+  border: 1px solid #cbd5e1;
+  height: 180px;
+  padding: 20px;
+  /* position: relative; */
+}
+
+.demo {
+  width: 120px;
+  padding: 20px;
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* We start coding here */
+
+/* Static */
+.static-demo {
+  position: static;
+  top: 20px;
+}
+
+/* Relative */
+.relative-demo {
+  position: relative;
+  left: 30px;
+  top: 100px;
+}
+
+/* Absolute */
+.absolute-parent {
+  position: relative;
+}
+
+.absolute-demo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Fixed */
+.fixed-demo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: tomato;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
+/* Sticky */
+.sticky-demo {
+  position: sticky;
+  top: 0;
+  background-color: #22c55e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tall-area {
+  height: 2000px;
+}

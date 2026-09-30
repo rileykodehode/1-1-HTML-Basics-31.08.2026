@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Dialog Tag</title>
+    <link rel="stylesheet" href="dialog.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>The Dialog Tag</h1>
+        <p>
+          The dialog tag creates a popup window that can open and close on the
+          page.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- BASIC DIALOG -->
+      <section>
+        <h2>Basic dialog</h2>
+        <p>Click the button to open the dialog.</p>
+
+        <!-- basic dialog demo goes here -->
+        <dialog id="my-dialog">
+          <h3>BUY MY TEMU SHIT</h3>
+          <p>Want a break from the ads?</p>
+          <audio src="media/funk.mp3" controls></audio>
+          <button id="close-dialog">Yes</button>
+        </dialog>
+
+        <button id="open-dialog">Open Dialog</button>
+      </section>
+
+      <!-- FORM INSIDE DIALOG -->
+      <section>
+        <h2>Dialog with a form</h2>
+        <p>Dialogs can also contain forms and other content.</p>
+
+        <!-- dialog with form demo goes here -->
+        <dialog id="form-dialog">
+          <h3>Write down this form please.</h3>
+          <form action="">
+            <label for="message">Enter your message...</label>
+            <textarea name="message" id="message"></textarea>
+          </form>
+
+          <button id="close-form">Close Form</button>
+        </dialog>
+        <button type="submit" id="open-form-dialog">Open Form</button>
+      </section>
+
+      <!-- EXPLANATION -->
+      <section>
+        <h2>Important dialog methods</h2>
+        <div class="example-box">
+          <p><code>showModal()</code> = opens the dialog</p>
+          <p><code>close()</code> = closes the dialog</p>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section>
+        <h2>Summary</h2>
+        <div class="summary">
+          <p><code>&lt;dialog&gt;</code> creates a popup window</p>
+          <p><code>showModal()</code> opens it</p>
+          <p><code>close()</code> closes it</p>
+          <p>Dialogs can contain text, buttons, and forms</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Get the first dialog and its buttons
+      let myDialog = document.getElementById("my-dialog");
+      let openDialogButton = document.getElementById("open-dialog");
+      let closeDialogButton = document.getElementById("close-dialog");
+
+      // Open the first dialog when the button is clicked
+      openDialogButton.addEventListener("click", function () {
+        myDialog.showModal();
+      });
+
+      // Close the first dialog when the button is clicked
+      closeDialogButton.addEventListener("click", function () {
+        myDialog.close();
+      });
+
+      // Close the first dialog when clicking outside of it
+      myDialog.addEventListener("click", function (event) {
+        // Check if the click was on the dialog itself (the backdrop area)
+        if (event.target === myDialog) {
+          myDialog.close();
+        }
+      });
+
+      // Get the second dialog and its open button
+      let formDialog = document.getElementById("form-dialog");
+      let openFormDialogButton = document.getElementById("open-form-dialog");
+      let closeFormDialogButton = document.getElementById("close-form");
+
+      // Open the second dialog when the button is clicked
+      openFormDialogButton.addEventListener("click", function () {
+        formDialog.showModal();
+      });
+
+      // Close the second dialog when the button is clicked
+      closeFormDialogButton.addEventListener("click", function () {
+        formDialog.close();
+      });
+    </script>
+  </body>
+</html>

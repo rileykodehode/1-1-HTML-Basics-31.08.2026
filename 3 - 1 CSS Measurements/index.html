@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>CSS Measurements</h1>
+        <p>
+          This page shows common CSS Units of measurement. Resize the browser to
+          compare.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="container">
+        <h2>Measurements</h2>
+
+        <h3>Pixels (px)</h3>
+        <p>
+          A pixel is an absolute unit. It's size does not depend on the parent
+          element or viewport.
+        </p>
+
+        <div class="example">
+          <div class="box px-box">width: 200px</div>
+        </div>
+
+        <h3>Percent (%)</h3>
+        <p>A percentage is based on the size of the parent element.</p>
+
+        <div class="example row">
+          <div class="box percent-box">width: 50%</div>
+          <div class="box percent-box">width: 50%</div>
+        </div>
+
+        <h3>em</h3>
+        <p>
+          em is relative to font size. For font-size it is based on the parent's
+          font size. For padding and margin, it is based on the elemen's own
+          font-size.
+        </p>
+
+        <div class="example row">
+          <div class="box small-text">
+            <p>font-size: 1em</p>
+          </div>
+
+          <div class="box big-text">
+            <p>font-size: 2em</p>
+          </div>
+        </div>
+
+        <h3>rem (root em)</h3>
+        <p>
+          rem is based on the root (html) font size. It is commonly used for
+          consistent font sizes and spacing.
+        </p>
+
+        <div class="example">
+          <div class="box rem-box">font-size: 3rem</div>
+        </div>
+
+        <h3>ch (character)</h3>
+        <p>
+          ch is approximately the width of the "0" chracter. It is useful for
+          controlling the readable length of text. Usually 60-70 ch is
+          considered the sweet spot.
+        </p>
+
+        <div class="example">
+          <div class="box characters">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+            recusandae suscipit veniam architecto quasi itaque nemo, illum
+            officia consequatur beatae aut? Delectus amet ex omnis tempora
+            officia laborum ut necessitatibus accusantium suscipit eius dolorem,
+            est nesciunt tempore fuga ducimus perspiciatis aliquam. Unde, a
+            consectetur? Libero iusto mollitia reiciendis? Optio, illo.
+          </div>
+        </div>
+
+        <h3>vw (viewport width)</h3>
+        <p>
+          vw is based on the browser width. 1vw is 1% of the viewport. Unlike
+          the %, it is not based on the parent. There are plenty of variants of
+          vw and vh, use them as you see fit.
+        </p>
+
+        <div class="example">
+          <div class="box vw-box">width: 50vw</div>
+        </div>
+
+        <h3>vh (viewport height)</h3>
+        <p>
+          vh is based on the browser height. 1vh is 1% of the viewport height.
+          We can set the height of a container to 100vh to take up the entire
+          screen, no matter what the size monitor/viewport the user has. Good
+          for hero sections.
+        </p>
+
+        <div class="example">
+          <div class="box vh-box">height: 30vh</div>
+        </div>
+      </section>
+
+      <!-- New Section -->
+      <section class="container">
+        <h2>Responsive images</h2>
+        <p>
+          Images can have a fixed size or shrink/grow to fit their container.
+        </p>
+
+        <h3>fixed image</h3>
+
+        <div class="example">
+          <img
+            src="https://picsum.photos/600/400?random=1"
+            alt=""
+            class="static-image"
+          />
+        </div>
+
+        <h3>Responsive image</h3>
+        <div class="example">
+          <img
+            src="https://picsum.photos/600/400?random=2"
+            alt=""
+            class="responsive-image"
+          />
+        </div>
+
+        <h3>object-fit</h3>
+        <p>object-fit controls how an image fills it's box.</p>
+
+        <div class="example row">
+          <div class="fit-card">
+            <img
+              src="https://picsum.photos/600/400?random=3"
+              alt=""
+              class="fit-image cover-image"
+            />
+            <p>object-fit:cover</p>
+            <p>
+              The image covers the entire parent, but depending on the viewport
+              size, we may lose some of our image on the top/bottom or
+              left/right.
+            </p>
+          </div>
+
+          <div class="fit-card">
+            <img
+              src="https://picsum.photos/600/400?random=4"
+              alt=""
+              class="fit-image contain-image"
+            />
+            <p>object-fit: contain</p>
+            <p>
+              Contains the image inside the parent, we always see the entire
+              image but this may mean we get whitepsace above/below or
+              left/right.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

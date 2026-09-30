@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="variables.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>CSS Variables</h1>
+        <p>
+          CSS variables let us store values and reuse them throughout a
+          stylesheet.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>What is a CSS variable?</h2>
+        <p>A CSS variable is a reusable value stored in CSS.</p>
+        <p>
+          We usually write them inside <code>:root</code> so the whole page can
+          use them.
+        </p>
+
+        <div class="example">
+          <p><strong>Example:</strong> <code>--main-color: #2563eb;</code></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Using a variable</h2>
+        <p>We use a variable with <code>var()</code>.</p>
+
+        <div class="example">
+          <div class="box main-color-box">This uses var(--main-color)</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Variables for colors</h2>
+        <p>
+          Variables are useful for storing colors that repeat across a website.
+        </p>
+
+        <div class="card-row">
+          <div class="color-card primary-card">Primary color</div>
+          <div class="color-card secondary-card">Secondary color</div>
+          <div class="color-card accent-card">Accent color</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Variables for spacing</h2>
+        <p>Variables can also store spacing values like padding and margin.</p>
+
+        <div class="card-row">
+          <div class="spacing-box small-space">Small spacing</div>
+          <div class="spacing-box medium-space">Medium spacing</div>
+          <div class="spacing-box large-space">Large spacing</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Variables for font sizes</h2>
+        <p>Variables can help keep text sizes consistent.</p>
+
+        <div class="example">
+          <p class="small-text">Small text variable</p>
+          <p class="medium-text">Medium text variable</p>
+          <p class="large-text">Large text variable</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Changing one variable updates many things</h2>
+        <p>
+          If several parts of the page use the same variable, changing the
+          variable updates them all.
+        </p>
+
+        <div class="button-row">
+          <a href="#" class="button">Button One</a>
+          <a href="#" class="button">Button Two</a>
+          <a href="#" class="button">Button Three</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Fallback values</h2>
+        <p>A fallback value is used if the variable does not exist.</p>
+
+        <div class="example">
+          <div class="fallback-box">This uses var(--missing-color, orange)</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Summary</h2>
+        <div class="summary">
+          <p>Variables start with <code>--</code></p>
+          <p>We often place them in <code>:root</code></p>
+          <p>Use them with <code>var()</code></p>
+          <p>They are useful for colors, spacing, and font sizes</p>
+          <p>Changing one variable can update many parts of a page</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is a title!</h1>
+
+    <h2>Basic Flexbox</h2>
+
+    <p>
+      When we add display:flex to a parent element, its children line up in a
+      row by default.
+    </p>
+
+    <div class="container">
+      <div class="box">box 1</div>
+      <div class="box">box 2</div>
+      <div class="box">box 3</div>
+    </div>
+
+    <h2>Flex Direction</h2>
+
+    <p>
+      Flexbox uses a main axis and a cross axis. By default, items go left to
+      right in a row on the main axis. We can use flex:direction to swap the
+      main axis and the cross axis.
+    </p>
+
+    <div class="container direction-column">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>Justify-content</h2>
+
+    <p>Justify-content moves children along the main axis.</p>
+
+    <h3>Center</h3>
+    <div class="container justify-center">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>End</h3>
+    <div class="container justify-end">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>Space Between</h3>
+    <div class="container justify-between">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>Space Around</h3>
+    <div class="container justify-around">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>Space Evenly</h3>
+    <div class="container justify-evenly">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>Align Items</h2>
+    <p>
+      align-items moves children on the cross-axis. In a row, that means up and
+      down. In a column that means left and right.
+    </p>
+
+    <h3>Align-Center</h3>
+    <div class="container tall-container align-center">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>Align-start</h3>
+    <div class="container tall-container align-start">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h3>Align-end</h3>
+    <div class="container tall-container align-end">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>Gap</h2>
+
+    <p>Gap adds space between flex items.</p>
+    <div class="container gap-example">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>Flex-wrap</h2>
+
+    <p>
+      Normally, flex items try to stay in one line. Flex-wrap lets them wrap
+      down to a new line if there's not enough space.
+    </p>
+
+    <div class="div container wrap-example">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+    </div>
+
+    <h2>Flex-grow</h2>
+
+    <p>Flex-grow decides which items grow to fill extra space.</p>
+
+    <div class="container grow-example">
+      <div class="box grow-1">Grow 1</div>
+      <div class="box grow-2">Grow 2</div>
+      <div class="box grow-3">Grow 3</div>
+    </div>
+
+    <h2>Flex-Shrink</h2>
+    <p>flex-shrink decides which items shrink when there's not enough space.</p>
+
+    <div class="container shrink-exapmle">
+      <div class="box no-shrink">No Shrink</div>
+      <div class="box shrink">Shrink</div>
+      <div class="box shrink">Shrink</div>
+    </div>
+
+    <h2>Flex Basis</h2>
+    <p>flex-basis sets the starting size of a flex item.</p>
+
+    <div class="container basis-example">
+      <div class="box basis-small">Small</div>
+      <div class="box basis-medium">Medium</div>
+      <div class="box basis-large">Large</div>
+    </div>
+
+    <h2>Flex shorthand</h2>
+    <p>
+      flex is a shorthand for flex-grow, flex-shrink and flex-basis all in one.
+    </p>
+
+    <div class="container shorthand">
+      <div class="box flex1">flex 1</div>
+      <div class="box flex2">flex 2</div>
+      <div class="box flex3">flex 3</div>
+    </div>
+
+    <h2>Order</h2>
+    <p>Order changes the visual order of flex items.</p>
+
+    <div class="container order-example">
+      <div class="box">Box 1</div>
+      <div class="box move-me">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>Align-self</h2>
+    <p>align-self lets one item align differently from the others.</p>
+    <div class="container tall-container align-start">
+      <div class="box">Box 1</div>
+      <div class="box special-align">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </body>
+</html>

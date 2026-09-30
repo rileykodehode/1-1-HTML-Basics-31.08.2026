@@ -1,0 +1,112 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222222;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #dbeafe;
+  padding: 30px 0;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+}
+
+/* SECTION */
+
+.section {
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+
+/* SHARED BACKGROUND BOX */
+
+.bg-box {
+  height: 220px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* We start coding here */
+
+.bg-color-demo {
+  background-color: purple;
+}
+
+.bg-image-demo {
+  background-image: url(images/cedric-vt-IuJc2qh2TcA-unsplash.jpg);
+  background-size: cover;
+  /* background-size: 100% 100%; */
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-demo {
+  background-image: url(images/amber-kipp-75715CVEJhI-unsplash.jpg);
+  background-repeat: repeat;
+  background-size: 100px;
+}
+
+.bg-size-demo {
+  background-image: url(images/hannah-troupe-0FQneB1VjaM-unsplash.jpg);
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.bg-position-demo {
+  background-image: url(images/cedric-vt-IuJc2qh2TcA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-attachment-demo {
+  background-image: url(images/cedric-vt-IuJc2qh2TcA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 300px;
+}
+
+.tall-area {
+  height: 2000px;
+}
+
+.bg-shorthand-demo {
+  background: tomato url(images/amber-kipp-75715CVEJhI-unsplash.jpg) center /
+    cover no-repeat;
+}

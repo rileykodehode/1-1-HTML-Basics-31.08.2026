@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Media</title>
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>HTML Media</h1>
+        <p>
+          HTML lets us add images, video, audio, and other media to a webpage.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- VIDEO -->
+      <section>
+        <h2>Video</h2>
+        <p>We use the <code>&lt;video&gt;</code> tag to add a video.</p>
+        <p>
+          The <code>controls</code> attribute adds play, pause, volume, and
+          fullscreen buttons.
+        </p>
+
+        <!-- Video demo goes here -->
+        <video
+          class="main-video"
+          src="media/example-video.mp4"
+          type="video./mp4"
+          controls
+          muted
+          loop
+          poster="media/cedric-vt-IuJc2qh2TcA-unsplash.jpg"
+        >
+          Your browser does not support this video.
+        </video>
+      </section>
+
+      <!-- VIDEO ATTRIBUTES -->
+      <section>
+        <h2>Useful video attributes</h2>
+        <p>Videos can use extra attributes to change how they behave.</p>
+        <p>
+          When using poster, you can set the CSS to width: 100%; aspect-ratio:
+          16 / 9; object-fit: cover; to make sure the image stays the same size
+          as the video.
+        </p>
+
+        <div class="example-box">
+          <p><strong>Common attributes:</strong></p>
+          <ul>
+            <li>controls = show video controls</li>
+            <li>autoplay = starts video automatically</li>
+            <li>loop = repeat the video indefinitely</li>
+            <li>mute = starts with no sound</li>
+            <li>poster = thumbnail image that shows before showing video</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- AUDIO -->
+      <section>
+        <h2>Audio</h2>
+        <p>We use the <code>&lt;audio&gt;</code> tag to add sound or music.</p>
+
+        <!-- Audio demo goes here -->
+        <audio src="media/funk.mp3" type="audio/mp3" controls>
+          Your browser does not support this video.
+        </audio>
+      </section>
+
+      <!-- AUDIO ATTRIBUTES -->
+      <section>
+        <h2>Useful audio attributes</h2>
+        <p>Audio uses many of the same attributes as video.</p>
+
+        <div class="example-box">
+          <p><strong>Common attributes:</strong></p>
+          <ul>
+            <li>controls = show video controls</li>
+            <li>autoplay = starts video automatically</li>
+            <li>loop = repeat the video indefinitely</li>
+            <li>mute = starts with no sound</li>
+            <li>poster = thumbnail image that shows before showing video</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- IFRAME -->
+      <section>
+        <h2>Iframe</h2>
+        <p>
+          We use the <code>&lt;iframe&gt;</code> tag to embed another webpage or
+          video inside our page.
+        </p>
+
+        <!-- iframe demo goes here -->
+        <iframe
+          src="https://www.google.com/maps/embed?..."
+          frameborder="0"
+          allowfullscreen
+          title="Google Maps"
+        ></iframe>
+      </section>
+
+      <!-- IFRAME NOTES -->
+      <section>
+        <h2>Important iframe attributes</h2>
+        <p>Iframes often need extra attributes to work well.</p>
+
+        <div class="example-box">
+          <p><strong>Common attributes:</strong></p>
+          <ul>
+            <li>src = set the webpage source</li>
+            <li>title = description for accessibility</li>
+            <li>
+              allowfullscreen = allows the use of fullscreen buttons in the
+              iframe
+            </li>
+            <li>width, height = sets the size of the iframe</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

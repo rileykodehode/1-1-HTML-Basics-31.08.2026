@@ -1,0 +1,142 @@
+/* CSS Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+
+.container {
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.box {
+  background-color: steelblue;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  min-width: 60px;
+}
+
+/* Headings, paragraphs */
+
+h1,
+h2,
+p {
+  margin: 10px;
+}
+
+/* Flex Direction */
+
+.direction-column {
+  flex-direction: column;
+}
+
+/* Justify center */
+.justify-center {
+  justify-content: center;
+}
+
+/* Justify-end */
+
+.justify-end {
+  justify-content: end;
+}
+
+/* Justify-between */
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Justify-around */
+
+.justify-around {
+  justify-content: space-around;
+}
+
+/* justify-evenly */
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align-Items */
+
+.tall-container {
+  height: 200px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: start;
+}
+
+.align-end {
+  align-items: end;
+}
+
+/* Gap */
+.gap-example {
+  gap: 100px;
+}
+
+/* Wrap Example */
+.wrap-example {
+  flex-wrap: wrap;
+}
+
+.grow-1 .grow-3 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 3;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.shrink {
+  flex-shrink: 1;
+  width: 200px;
+}
+
+/* Flex-basis */
+.basis-small {
+  flex-basis: 100px;
+}
+.basis-medium {
+  flex-basis: 250px;
+}
+.basis-large {
+  flex-basis: 500px;
+}
+
+/* flex shorthand */
+.flex1 {
+  flex: 1 250px;
+}
+.flex2,
+.flex3 {
+  flex: 5 250px;
+}
+
+.move-me:hover {
+  order: -1;
+}
+
+.special-align {
+  align-self: end;
+}
