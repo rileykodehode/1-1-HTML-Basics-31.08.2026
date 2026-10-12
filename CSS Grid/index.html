@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Grid</title>
+  </head>
+  <body>
+    <main>
+      <h1>CSS Grid</h1>
+      <p class="intro">
+        CSS Grid is used to arrange elements into rows and columns.
+      </p>
+
+      <section>
+        <h2>Display: Grid</h2>
+
+        <p class="description">
+          Adding <code>display: grid</code> turns an element into a grid
+          container. It's children become the grid items.
+        </p>
+
+        <div class="example-grid grid1">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Grid Columns and Rows</h2>
+
+        <p class="description">
+          Use <code>grid-template-columns</code> and
+          <code>grid-template-rows</code> to control the amount of rows in our
+          grid.
+        </p>
+
+        <div class="example-grid grid2">
+          <div class="box">1</div>
+          <div class="box">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+          <div class="box">5</div>
+          <div class="box">6</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Grid Template Areas</h2>
+
+        <p class="description">
+          Named areas let you describe your layout visually and assign elements
+          to those areas with <code>grid-area</code>
+        </p>
+
+        <div class="example-grid grid3">
+          <div class="box header">header</div>
+          <div class="box sidebar">sidebar</div>
+          <div class="box content">content</div>
+          <div class="box footer">footer</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Grid Column and Grid Row</h2>
+
+        <p class="description">
+          Grid lines let you control exactly where an item starts and end. You
+          can also use <code>span</code> to make an item occupy multiple rows of
+          columns.
+        </p>
+
+        <div class="example-grid grid4">
+          <div class="box one">1</div>
+          <div class="box two">2</div>
+          <div class="box three">3</div>
+          <div class="box four">4</div>
+          <div class="box five">5</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

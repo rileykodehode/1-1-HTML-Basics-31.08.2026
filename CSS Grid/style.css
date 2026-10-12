@@ -1,0 +1,182 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global CSS */
+
+body {
+  background-color: whitesmoke;
+  color: midnightblue;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: navy;
+  font-size: 2.5rem;
+}
+
+.intro {
+  margin-bottom: 3rem;
+  color: dimgray;
+  font-size: 1.1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+  color: dimgray;
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  background-color: lightgray;
+  color: navy;
+}
+
+/* Shared Grid Styles  */
+
+.example-grid {
+  min-height: 220px;
+  padding: 1rem;
+  border: 2px solid darkgray;
+  border-radius: 10px;
+  background-color: gainsboro;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  border: 2px solid cornflowerblue;
+  border-radius: 8px;
+  background-color: lightblue;
+  color: midnightblue;
+  font-weight: bold;
+}
+
+/* Display grid */
+
+.grid1 {
+  display: grid;
+}
+
+.grid2 {
+  display: grid;
+  /* grid-template-columns: 50% 50%; */
+  /* grid-template-columns: 1fr 500px 1fr; */
+
+  /* We don't always need to use grid-template-rows. 
+  New rows will be created if we have enough elemenets inside our grid. */
+
+  /* grid-template-rows: 1fr 2fr 1fr; */
+  /* If we want our rows to be different sizes, that's when we would use grid-template-rows. */
+
+  /* shorthand for grid-template-rows / grid-template-columns */
+  /* grid-template: 1fr 2fr 1fr / 1fr 300px 2fr; */
+
+  grid-template-columns: repeat(4, 100px);
+}
+
+/* Grid Area */
+
+.grid3 {
+  display: grid;
+
+  /* grid-template-columns: 1fr 3fr;
+  grid-template-rows: 80px 200px 60px;
+
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer"; */
+
+  /* shorthand for columns + rows + areas */
+  grid-template:
+    "header header" 80px
+    "sidebar content" 200px
+    "footer footer" 60px
+    / 1fr 3fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* grid-column / grid-row */
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 80px);
+
+  gap: 1rem;
+}
+
+.one {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.two {
+  /* grid-column-start: 3;
+  grid-column-end: 5; */
+
+  /* grid-column is shorthand for grid-column-start and grid-column-end */
+  grid-column: 3 / 5;
+
+  /* grid-row is shorthand for grid-row-start and grid-row-end */
+  grid-row: 1 / 3;
+}
+
+.three {
+  /* grid-column: 1 / 2;
+  grid-row: 2 / 4; */
+
+  /* grid-area is the shorthand combining grid-column and grid-row */
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+.four {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.five {
+  grid-column: span 2;
+}
